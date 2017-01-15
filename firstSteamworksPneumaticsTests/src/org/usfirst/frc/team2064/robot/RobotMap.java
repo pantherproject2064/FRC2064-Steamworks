@@ -1,12 +1,15 @@
 package org.usfirst.frc.team2064.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
-public class RobotMap {
+public interface RobotMap {
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static int leftMotor = 1;
@@ -30,19 +33,20 @@ public class RobotMap {
 					// Pin for motor with encoder - 4 (1/15/17)
 					//encoder on pin 0,1
 	//Encoders
-		public static int 
+		public static int ENC_ONE_P = 0; //P = primary pin, S = secondary pin
+		public static int ENC_ONE_S = 1;
 	
 	//Pneumatics
 		
 		//Pneumatics Wiring
 		public static final int COMPRESSOR = 0;
-		public static final int S_PIVOT_A = 0;
-		public static final int S_HOLD_B = 6;
-		public static final int S_HOLD_A = 1;
-		public static final int S_PIVOT_B = 7;
+		public static final int FORWARD_CHANNEL_1 = 0;
+		public static final int BACKWARD_CHANNEL_1 = 6;
+		public static final int FORWARD_CHANNEL_2 = 1;
+		public static final int BACKWARD_CHANNEL_2 = 7;
 		
 		//Pneumatics Constants
-		public static final Value = DoubleSolenoid.Value.kForward;
-		public static final Value = DoubleSolenoid.Value.kBackward;
+		public static final Value EXT = DoubleSolenoid.Value.kForward;
+		public static final Value RET = DoubleSolenoid.Value.kReverse;
 		
 }
