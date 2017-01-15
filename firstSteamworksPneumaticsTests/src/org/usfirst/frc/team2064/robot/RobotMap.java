@@ -21,15 +21,14 @@ public interface RobotMap {
 	// public static int rangefinderModule = 1;
 	
 	//Joysticks
-		public static int leftJoystick = 0;
-		public static int rightJoystick = 1;
+		public static int STICK = 1;
 		
 	//Driving Motors
 		public static int driveRight1 = 0; //talon 0
 		public static int driveRight2 = 1; //talon 1
 		public static int driveLeft1 = 2; //talon 2
 		public static int driveLeft2 = 3; //talon 3
-		public static int testMotorEWithENC = 4; //ENC ONE (1/15/17)
+		public static int testMotorWithENC = 4; //ENC ONE (1/15/17)
 		
 	//Encoders
 		public static int ENC_ONE_P = 0; //P = primary pin, S = secondary pin
@@ -46,9 +45,14 @@ public interface RobotMap {
 		public static final Value EXT = DoubleSolenoid.Value.kForward;
 		public static final Value RET = DoubleSolenoid.Value.kReverse;
 		
-	//Power
+		//Pneumatics Buttons
+		public static final int LOW_GEAR_PORT = 0; //CHANGE
 		
+	//Power
+
 		//Motors
+		
 		//Pneumatics
+		
 		
 }
