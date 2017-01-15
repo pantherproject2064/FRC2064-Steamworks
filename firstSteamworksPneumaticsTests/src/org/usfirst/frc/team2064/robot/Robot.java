@@ -40,6 +40,7 @@ public class Robot extends IterativeRobot implements RobotMap {
 	public void robotInit() {
 		oi = new OI();
 		comp = Pneumatics.getInstance();
+		
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);

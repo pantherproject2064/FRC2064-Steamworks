@@ -29,9 +29,8 @@ public interface RobotMap {
 		public static int driveRight2 = 1; //talon 1
 		public static int driveLeft1 = 2; //talon 2
 		public static int driveLeft2 = 3; //talon 3
+		public static int testMotorEWithENC = 4; //ENC ONE (1/15/17)
 		
-					// Pin for motor with encoder - 4 (1/15/17)
-					//encoder on pin 0,1
 	//Encoders
 		public static int ENC_ONE_P = 0; //P = primary pin, S = secondary pin
 		public static int ENC_ONE_S = 1;
