@@ -23,6 +23,6 @@ public class RobotMap {
 	public static final int S_HOLD_B = 6;
 	public static final int S_HOLD_A = 1;
 	public static final int S_PIVOT_B = 7;
-	
+	public static final Value = DoubleSolenoid
 	
 }
