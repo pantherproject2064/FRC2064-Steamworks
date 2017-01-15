@@ -30,12 +30,12 @@ public class Pneumatics extends Subsystem implements RobotMap {
 	private Pneumatics() {
 		comp = new Compressor(COMPRESSOR);
 		comp.start();
-
-		pivot = new DoubleSolenoid(FORWARD_CHANNEL_1, S_PIVOT_B);
-		hold = new DoubleSolenoid(S_HOLD_A, S_HOLD_B);
+	
+		pivot = new DoubleSolenoid(FORWARD_CHANNEL_1, BACKWARD_CHANNEL_1);
+		hold = new DoubleSolenoid(FORWARD_CHANNEL_2, BACKWARD_CHANNEL_2);
 		time = new Timer();
 	}
-
+	
 	public void pivotOut() {
 		pivot.set(EXT);
 	}
