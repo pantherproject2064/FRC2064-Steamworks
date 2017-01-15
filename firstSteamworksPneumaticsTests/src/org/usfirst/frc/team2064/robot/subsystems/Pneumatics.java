@@ -13,7 +13,7 @@ public class Pneumatics extends Subsystem implements RobotMap {
 
 	private Timer time;
 	protected final Compressor comp;
-	protected final DoubleSolenoid pivot, hold;
+	protected final DoubleSolenoid solenoid1, solenoid2;
 
 	@Override
 	protected void initDefaultCommand() {
@@ -31,25 +31,25 @@ public class Pneumatics extends Subsystem implements RobotMap {
 		comp = new Compressor(COMPRESSOR);
 		comp.start();
 	
-		pivot = new DoubleSolenoid(FORWARD_CHANNEL_1, BACKWARD_CHANNEL_1);
-		hold = new DoubleSolenoid(FORWARD_CHANNEL_2, BACKWARD_CHANNEL_2);
+		solenoid1 = new DoubleSolenoid(FORWARD_CHANNEL_1, BACKWARD_CHANNEL_1);
+		solenoid2 = new DoubleSolenoid(FORWARD_CHANNEL_2, BACKWARD_CHANNEL_2);
 		time = new Timer();
 	}
 	
-	public void pivotOut() {
-		pivot.set(EXT);
+	public void solenoid1Out() {
+		solenoid1.set(EXT);
 	}
 
-	public void pivotIn() {
-		pivot.set(RET);
+	public void solenoid1In() {
+		solenoid1.set(RET);
 	}
 
 	public void release() {
-		hold.set(EXT);
+		solenoid2.set(EXT);
 	}
 
 	public void contain() {
-		hold.set(RET);
+		solenoid2.set(RET);
 	}
 
 	public void start() {

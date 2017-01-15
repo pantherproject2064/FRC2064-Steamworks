@@ -49,4 +49,9 @@ public interface RobotMap {
 		public static final Value EXT = DoubleSolenoid.Value.kForward;
 		public static final Value RET = DoubleSolenoid.Value.kReverse;
 		
+	//Power
+		
+		//Motors
+		//Pneumatics
+		
 }
