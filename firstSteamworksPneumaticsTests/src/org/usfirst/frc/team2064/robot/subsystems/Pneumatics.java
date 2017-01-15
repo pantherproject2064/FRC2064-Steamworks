@@ -13,7 +13,7 @@ public class Pneumatics extends Subsystem implements RobotMap {
 
 	private Timer time;
 	protected final Compressor comp;
-	protected final DoubleSolenoid solenoid1, solenoid2;
+	protected final DoubleSolenoid solenoid1;
 
 	@Override
 	protected void initDefaultCommand() {
@@ -29,10 +29,12 @@ public class Pneumatics extends Subsystem implements RobotMap {
 
 	private Pneumatics() {
 		comp = new Compressor(COMPRESSOR);
-		comp.start();
-	
+		comp.start(); // starts the compressor by setting closed loop mode true
+		
+		System.out.println("Compressor Status: " + comp.getClosedLoopControl());
+		
 		solenoid1 = new DoubleSolenoid(FORWARD_CHANNEL_1, BACKWARD_CHANNEL_1);
-		solenoid2 = new DoubleSolenoid(FORWARD_CHANNEL_2, BACKWARD_CHANNEL_2);
+		
 		time = new Timer();
 	}
 	
@@ -42,14 +44,6 @@ public class Pneumatics extends Subsystem implements RobotMap {
 
 	public void solenoid1In() {
 		solenoid1.set(RET);
-	}
-
-	public void release() {
-		solenoid2.set(EXT);
-	}
-
-	public void contain() {
-		solenoid2.set(RET);
 	}
 
 	public void start() {

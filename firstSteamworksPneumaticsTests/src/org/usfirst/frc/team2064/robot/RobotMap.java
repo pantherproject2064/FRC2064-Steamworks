@@ -40,9 +40,7 @@ public interface RobotMap {
 		//Pneumatics Wiring
 		public static final int COMPRESSOR = 0;
 		public static final int FORWARD_CHANNEL_1 = 0;
-		public static final int BACKWARD_CHANNEL_1 = 6;
-		public static final int FORWARD_CHANNEL_2 = 1;
-		public static final int BACKWARD_CHANNEL_2 = 7;
+		public static final int BACKWARD_CHANNEL_1 = 1;
 		
 		//Pneumatics Constants
 		public static final Value EXT = DoubleSolenoid.Value.kForward;
